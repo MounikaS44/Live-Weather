@@ -1,4 +1,4 @@
-const apiid = 'your_api_key_here'
+const apiid = '556de8ae52e74c3b46dde500a22cfd24'
 
 // // 🌙 Theme toggle
 // const toggle = document.querySelector('#themeToggle')
@@ -93,7 +93,7 @@ function setWeatherImage(condition) {
     const img = document.querySelector('.three img')
 
     if (condition === "Clouds") {
-        img.src = "Images/cloud-.png"
+        img.src = "Images/clouds-.png"
     } else if (condition === "Clear") {
         img.src = "Images/clear-.png"
     } else if (condition === "Rain") {
