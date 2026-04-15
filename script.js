@@ -1,4 +1,4 @@
-const apiid = '556de8ae52e74c3b46dde500a22cfd24'
+const apiid = 'your_api_key_here'
 
 // // 🌙 Theme toggle
 // const toggle = document.querySelector('#themeToggle')
