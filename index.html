@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather 🌦️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/cf73954ac0.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav>
+        <div class="nav">
+        <div class="tag">
+            <img id="logo-img" src="Images/logo-.png" alt="logo">
+            <h4>Tiny Sky Tales</h4>
+            <img id="logo-img" src="Images/logo1-.png" alt="logo">
+        </div>
+        <!-- <button id="themeToggle">🌙</button> -->
+        </div>
+    </nav>
+    
+    <div class="main">
+        <div class="four">
+        <div class="box">
+            <div class="inp">
+                <input type="text" placeholder="Enter City Name">
+                <button><i id="search" class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+        <p id="err">Invalid city name</p>
+
+        <div class="five">
+            <div class="one">
+                <video autoplay muted loop playsinline class="bg-video">
+                    <source src="Images/bg.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">
+                    <div id="loader">Loading...</div>
+
+                    <h1 id="country">New York</h1>
+                    <div class="three">
+                        <img src="Images/Weather_Icon-.png" alt="cloud">
+                        <h1 id="temp">23</h1>
+                    </div>
+                    <p id="des">Heavy Intense Rain</p>
+                </div>
+            </div>
+        
+        
+            <div class="two">
+                <div class="inner">
+                    <p>Humidity</p>
+                    <div class="hum">
+                        <img src="Images/humidity-.png" alt="humidity">
+                        <h1 id="humidity">90%</h1>
+                    </div>
+                    
+                </div>
+                <div class="inner">
+                    <p>Wind Speed</p>
+                    <div class="hum">
+                        <img src="Images/wind-.png" alt="wind">
+                        <h1 id="wind">90km/hr</h1>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div id="forecast">
+        
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
