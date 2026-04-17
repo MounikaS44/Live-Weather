@@ -7,23 +7,21 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-image: url("Images/wallpaper2.jpg");
+    background-image: url("Images/wallpaper3.jpg");
     background-size: cover;        /* fills screen */
     /* background-position: center;   center image */
     background-repeat: no-repeat;  /* no repeat */
-    height: 100vh;
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .nav{
-    margin: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 30px;
-    padding-right: 50px;
+    margin-top: 10px;
+    padding: 5px 5px;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
     border-radius: 25px;
     border-color: #27577F;
     border-style:solid;
@@ -32,7 +30,7 @@ body {
 .tag{
     display: flex;
     flex-direction: row;
-    /* justify-content: space-around; */
+    justify-content: center;
     align-items: center;
     color: white;
 }
@@ -52,10 +50,12 @@ body {
 }
 
 .four{
-    width: 800px;
+    width: 90%;
+    margin: 80px auto;
+    /* width: 800px;
     margin-top: 120px;
     margin-left: 350px;
-    margin-right: 350px;
+    margin-right: 350px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,8 +63,11 @@ body {
 } 
 
 .five{
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     margin-top: 40px;
     /* border-style: solid; */
     width: 800px;
@@ -78,7 +81,8 @@ body {
     background-color: white;
     border: none;
     border-radius: 25px;
-    width: 650px;
+    /* width: 650px; */
+    width: 100%;
 }
 
 .inp{
@@ -119,10 +123,12 @@ body {
 
 .one{
     position: relative;
-    width: 350px;
-    height: 250px;
+    /* width: 350px;
+    height: 250px; */
     overflow: hidden;
     border-radius: 25px;
+    width: 100%;
+    height: 220px;
 }
 
 /* 🎥 Video as background */
@@ -188,9 +194,12 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
+    /* justify-content: space-evenly; */
+    /* flex-direction: column; */
     /* margin-top: 25px; */
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .hum{
@@ -246,4 +255,27 @@ body {
     text-align: center;
     color: black;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 📲 Tablet */
+@media (min-width: 768px) {
+    .five {
+        flex-direction: row;
+    }
+
+    .one {
+        width: 350px;
+        height: 250px;
+    }
+
+    .two {
+        flex-direction: column;
+    }
+}
+
+/* 💻 Desktop */
+@media (min-width: 1024px) {
+    .four {
+        width: 800px;
+    }
 }

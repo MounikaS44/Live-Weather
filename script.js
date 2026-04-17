@@ -1,4 +1,4 @@
-const apiid = 'your_api_key_here'
+const apiid = '556de8ae52e74c3b46dde500a22cfd24'
 
 // // 🌙 Theme toggle
 // const toggle = document.querySelector('#themeToggle')
@@ -6,7 +6,7 @@ const apiid = 'your_api_key_here'
 //     document.body.classList.toggle('dark')
 // })
 
-// 📦 Common UI updater (IMPORTANT)
+// Common UI updater
 function updateUI(data) {
     document.querySelector('#country').innerHTML = data.name
     document.querySelector('#temp').innerHTML = Math.round(data.main.temp) + '°C'
@@ -53,20 +53,20 @@ const checkweather = async (name) => {
     }
 }
 
-// 🔍 Button click
+// Button click
 document.querySelector('.inp button').addEventListener('click', () => {
     const location = document.querySelector('.inp input').value
     checkweather(location)
 })
 
-// ⌨️ Enter key
+// Enter key
 document.querySelector('.inp input').addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         checkweather(e.target.value)
     }
 })
 
-// 📍 Geolocation
+// Geolocation
 function getUserLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(async (position) => {
@@ -107,7 +107,7 @@ function setWeatherImage(condition) {
     }
 }
 
-// 📅 5-day forecast
+// 5-day forecast
 async function getForecast(city) {
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiid}&units=metric`
 
@@ -130,9 +130,6 @@ async function getForecast(city) {
         <p>${Math.round(day.main.temp)}°C</p>
         <p>${day.weather[0].main}</p>
     </div>
-`
-
-
-        
+` 
     }
 }
