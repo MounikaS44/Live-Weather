@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Sky Tales 🌦️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Nunito:wght@300;400;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cf73954ac0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- ☁️ Animated Sky Layer (rain, snow, lightning, stars, sun glow) -->
+    <div class="sky-layer" id="skyLayer">
+        <div class="stars" id="stars"></div>
+        <div class="sun-glow" id="sunGlow"></div>
+        <canvas class="rain-canvas" id="rainCanvas"></canvas>
+        <canvas class="snow-canvas" id="snowCanvas"></canvas>
+        <div class="lightning-overlay" id="lightningOverlay"></div>
+    </div>
+
+    <!-- 🎥 Weather Video Backgrounds -->
+    <video autoplay muted loop playsinline class="bg-video-global" id="bgVideoA">
+        <source src="Images/bg.mp4" type="video/mp4">
+    </video>
+    <video autoplay muted loop playsinline class="bg-video-global" id="bgVideoB">
+        <source src="Images/bg.mp4" type="video/mp4">
+    </video>
+    <div class="bg-overlay-global" id="bgOverlay"></div>
+
+    <!-- 🔝 Navbar -->
+    <nav>
+        <div class="nav">
+            <div class="nav-inner">
+                <div class="tag">
+                    <img class="logo-img" src="Images/logo-.png" alt="logo">
+                    <h4>Tiny Sky Tales</h4>
+                    <img class="logo-img" src="Images/logo1-.png" alt="logo">
+                </div>
+                <p class="nav-tagline">Look up. The sky always has something to say.</p>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="main">
+        <div class="four">
+
+            <!-- 🔍 Search Box -->
+            <div class="box">
+                <div class="inp">
+                    <input type="text" placeholder="Search city..." id="cityInput">
+                    <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+            <p id="err">Invalid city name</p>
+
+            <!-- Weather Panel — Main Card + Stats side by side -->
+            <div class="five">
+
+                <!-- Left: Main Card -->
+                <div class="one">
+                    <div id="loader" class="loader-wrap">
+                        <div class="loader-spinner"></div>
+                        <span>Fetching skies...</span>
+                    </div>
+                    <div class="overlay" id="mainOverlay">
+                        <h2 id="country">-</h2>
+                        <div class="three">
+                            <img src="Images/Weather_Icon-.png" alt="weather" id="weatherIcon">
+                            <div class="temp-block">
+                                <h1 id="temp">--°C</h1>
+                                <p id="des">-</p>
+                            </div>
+                        </div>
+                        <div class="date-time" id="dateTime"></div>
+                    </div>
+                </div>
+
+                <!-- Right: Stats + Quote -->
+                <div class="two">
+                    <div class="stats-grid">
+                        <div class="inner stat-card">
+                            <p class="stat-label">Humidity</p>
+                            <div class="hum">
+                                <img src="Images/humidity-.png" alt="humidity">
+                                <h1 id="humidity">--%</h1>
+                            </div>
+                        </div>
+                        <div class="inner stat-card">
+                            <p class="stat-label">Wind Speed</p>
+                            <div class="hum">
+                                <img src="Images/wind-.png" alt="wind">
+                                <h1 id="wind">-- km/h</h1>
+                            </div>
+                        </div>
+                        <div class="inner stat-card">
+                            <p class="stat-label">Feels Like</p>
+                            <div class="hum">
+                                <img src="Images/sunny-.png" alt="feels">
+                                <h1 id="feelsLike">--°C</h1>
+                            </div>
+                        </div>
+                        <div class="inner stat-card">
+                            <p class="stat-label">Visibility</p>
+                            <div class="hum">
+                                <img src="Images/clear-.png" alt="visibility">
+                                <h1 id="visibility">-- km</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="quote-block" id="quoteBlock">
+                        <span class="quote-icon" id="quoteIcon">🌤️</span>
+                        <p class="quote-text" id="quoteText">Look up. The sky always has something to say.</p>
+                    </div>
+                </div>
+
+            </div><!-- end .five -->
+
+            <!-- 📅 5-Day Forecast -->
+            <div id="forecast"></div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
